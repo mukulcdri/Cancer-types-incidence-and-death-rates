@@ -18,20 +18,20 @@ shinyServer(function(input, output) {
       select(Year,Gender,Race,Cancer_Type,Incidence_rate, Death_rate)
     #y_value <- vals$y
     ggplot(data = data, aes_string(x  = data$Year, y = input$y)) +
-      geom_point(color = "red", size = 3.5) + 
-      geom_line(colour = "grey", width = 20) +
+      geom_point(color = "red", size = 4.5) + 
+      geom_line(colour = "grey", width = 30) +
       facet_wrap(~ data$Race, nrow = 3) +
-      scale_x_continuous(name = "Year", limits = c(1999, 2014),
+      scale_x_continuous(name = "Time span (Years)", limits = c(1999, 2014),
                          breaks = c(1999,2002, 2005, 2008,2011,2014)) +
       scale_y_continuous(name = "/ 100,000 people") +
       labs(caption = "(based on data from https://www.cdc.gov/cancer/lung/statistics/race.html)") +
       theme_dark() + 
-      theme( axis.text = element_text( size = 12 ),
-             axis.text.x = element_text( size = 10, face = "bold" ),
+      theme( axis.text.y  = element_text( size = 12, face = "bold" ),
+             axis.text.x = element_text( size = 12, face = "bold" ),
              axis.title = element_text( size = 14, face = "bold" ),
-             legend.position="none",
+             legend.position = "none",
              # The new stuff
-             strip.text = element_text(size = 10, face = "bold",color = 'white' ))
+             strip.text = element_text(size = 16, face = "bold",color = 'white' ))
       
       
       #theme(axis.title=element_text(face = "bold",size = "14", color = "black"))
@@ -40,5 +40,5 @@ shinyServer(function(input, output) {
     
     
     
-  }, height = 540, width = 680 )
+  }, height = 600, width = 800 )
 })

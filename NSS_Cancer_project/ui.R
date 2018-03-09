@@ -1,9 +1,10 @@
 # Define UI for application that draws a histogram
 shinyUI(
-  fluidPage(theme = shinytheme("slate"),
+  fluidPage(tags$style(type="text/css", css),
+    theme = shinytheme("slate"),
     
     # Application title
-    titlePanel("Cancer prevalence"),
+    titlePanel("Cancer Rates in United States: Incidences and Deaths"),
      sidebarLayout(
     # Inputs
     sidebarPanel(

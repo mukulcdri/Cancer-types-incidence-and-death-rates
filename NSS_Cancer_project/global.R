@@ -1,0 +1,8 @@
+library(shiny)
+library(ggplot2)
+library(dplyr)
+library(shinythemes)
+library(plotly)
+#library(hexbin)
+#Cancer_IR_DR_L <- readRDS("/Users/mac/Desktop/NSS/R/data/Cancer_IR_DR_L.rds")
+Cancer_IR_DR_L <- readRDS("/Users/mac/Desktop/NSS/R/NSS_Cancer_project/data/Cancer_IR_DR_L.rds")
